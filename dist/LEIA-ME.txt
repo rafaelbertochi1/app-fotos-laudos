@@ -1,0 +1,128 @@
+DOWNLOADER DE FOTOS - CENTRAL DE GESTÃO  (versão 2.6)
+==============================================
+
+Busca as fotos de uma proposta na Central de Gestão, deixa você escolher,
+ordenar e renomear as fotos, e monta o Excel no modelo padrão do BANCO
+escolhido:
+  BANCO C (modelos Comparativo ou Evolutivo) -> planilha_<nº>_comparativo.xlsm
+  - aba "Fotos internas imóvel": as fotos escolhidas, na ordem da tela,
+    com o nome de cada uma no campo "Descrição";
+  - aba "Mapa e fotos locais": as fotos que você puser nas seções Fachada,
+    Identificação, Logradouro à esquerda, Logradouro à direita - e em
+    seções novas que você criar (cada uma vira um quadro novo).
+  BANCO D -> <nº>_FORMULARIO.xlsx
+  - escolha em "Modelo do Excel" o TIPO DE OPERAÇÃO: Aquisição simples,
+    Aquisição à vista FGTS, Consórcio urbano, Consórcio reforma sem
+    ampliação ou Garantia imóvel urbano. O tipo de operação já vem
+    preenchido. Consórcio reforma: tem também os campos "Descrição dos
+    serviços de reforma / Custo / Prazo" (FORMULARIO, linhas 170-172), que
+    aparecem na PAG.1. Garantia: a PAG.1 mostra o "Valor de Liquidez".
+    O programa ESCOLHE O MODELO SOZINHO: ao buscar a proposta, ele lê o tipo
+    de operação na planilha do banco anexada à requisição na Intranet e
+    mostra embaixo do campo Modelo (ex.: "Intranet: CONSÓRCIO (IMÓVEL
+    URBANO) -> modelo Consórcio urbano selecionado"). Para isso, configure
+    uma vez o login da Intranet ("Configurar Intranet", no alto à
+    direita). Se não achar, avisa e você escolhe o modelo. Da mesma
+    planilha do banco vêm a JUNÇÃO e o NOME DA JUNÇÃO da FORMULARIO.
+  - aba "FOTOS": as fotos escolhidas, 2 por fileira com a legenda embaixo,
+    6 por página;
+  - aba "PAG.1": Foto do imóvel, Foto logradouro e Foto nº imóvel (e as
+    seções novas que você criar, em páginas "FOTOS COMPLEMENTARES").
+    Diferente do Banco C: a foto posta num quadro da PAG.1 continua TAMBÉM
+    na aba "FOTOS" (na posição dela na tela).
+  - aba "FORMULARIO": já vem pré-preenchida com tudo que a vistoria tem
+    na Central de Gestão (identificação, endereço, áreas, vagas, região,
+    terreno, imóvel, cômodos, vistoriador...). Data do laudo = hoje;
+    engenheira responsável = ENGENHEIRA RESPONSÁVEL EXEMPLO / CREA 1234567890 /
+    SÃO PAULO; áreas sem averbação = construída estimada - construída da
+    matrícula (atualiza sozinha se você mudar a estimada). Grupo/cota
+    (consórcio), dados da reforma, distâncias dos serviços, IPTU e valores
+    a Central de Gestão não tem: ficam em branco para preencher. CONFIRA os dados
+    antes de enviar o laudo.
+  - a assinatura da engenheira responsável já entra na PAG.1, ao lado de
+    "Engº./Crea".
+
+PRECISA TER
+  - Windows 10 ou 11
+  - Excel instalado no computador
+  - Internet
+
+PRIMEIRA VEZ (só uma vez em cada computador)
+  1. Dê dois cliques em DownloaderFotos_v<versão>.exe (ex.: DownloaderFotos_v2.2.exe;
+     o número no nome é a versão - fica sempre só a mais nova na pasta).
+     Se aparecer "O Windows protegeu o computador":
+     clique em "Mais informações" > "Executar assim mesmo".
+  2. Clique em "Configurar login…", digite seu e-mail e senha do
+     Central de Gestão e clique em "Salvar". Deve aparecer "Login salvo e
+     testado na Central de Gestão com sucesso".
+
+NO DIA A DIA
+  1. Digite o nº da proposta e clique em "Buscar fotos" (ou Enter).
+     As fotos aparecem na ordem da Central de Gestão. Se alguma foto tiver
+     OBSERVAÇÃO na Central de Gestão (a que aparece ao abrir a foto lá), o
+     programa avisa logo, lista as observações, marca a foto com o selo
+     amarelo "OBS" e mostra o texto quando você abre a foto grande.
+  2. Escolha e organize:
+     - CLIQUE NA FOTO para ver grande (← → passa as fotos, Espaço
+       inclui/tira, Esc fecha);
+     - "Incluir" tira ou põe a foto no Excel (fora = foto apagada);
+     - ARRASTE a foto para mudar a ordem: a barra azul mostra onde ela vai
+       cair (ou use ◀ ▶);
+     - clique no nome para RENOMEAR (↺ volta o nome original);
+     - na caixa de baixo escolha a SEÇÃO: "Aba principal" ou um quadro da
+       aba de quadros do banco (Banco C: "Mapa e fotos locais"; Banco D:
+       "PAG.1") - cada quadro aceita uma foto. "+ Nova seção…" cria uma
+       seção nova com o nome que você digitar (Banco C: quadro novo na aba
+       "Mapa e fotos locais"; Banco D: página "FOTOS COMPLEMENTARES" na
+       própria PAG.1) - ela fica salva para as próximas propostas; o botão
+       "Seções…" mostra e apaga as seções criadas. "Sugerir quadros" preenche os quadros pelos nomes,
+       se quiser - confira antes de gerar.
+     - "+ Fotos do computador…" adiciona fotos que estão no seu PC (além
+       das da Central de Gestão): elas entram no fim da galeria, marcadas "DO PC",
+       com o nome do arquivo, e funcionam igual às outras (ordenar,
+       renomear, mandar para um quadro). Não são enviadas para a Central de Gestão.
+  3. Confira a pasta ("Salvar em"), o BANCO e o modelo do Excel e clique
+     em "Gerar Excel com as fotos selecionadas". O programa lembra o banco,
+     o modelo e as seções criadas de cada banco.
+  O resultado fica em:
+     <pasta escolhida>\Proposta_<nº>\planilha_<nº>_comparativo.xlsm
+                                     (Banco C Evolutivo: _evolutivo.xlsm;
+                                      Banco D: <nº>_FORMULARIO.xlsx)
+     <pasta escolhida>\Proposta_<nº>\Fotos\   (só as fotos escolhidas)
+  Dá para mudar a seleção e gerar de novo sem buscar outra vez.
+
+TRABALHO SALVO (voltar numa proposta dias depois)
+  Tudo o que você faz na galeria fica salvo neste computador: quais fotos
+  entram, a ordem, os nomes trocados, os quadros/seções e as fotos do
+  computador. Ao buscar de novo uma proposta já trabalhada, o programa
+  pergunta se você quer RETOMAR de onde parou (ex.: laudo que voltou para
+  correção). "Não" começa do zero, na ordem da Central de Gestão. Se a
+  Central de Gestão ganhou ou perdeu fotos nesse meio tempo, o programa
+  avisa; as novas vão para o fim da galeria. O trabalho fica guardado por 4 meses.
+
+VERSÃO NOVA
+  Quando sair uma versão nova na pasta pública, o programa avisa ao abrir
+  e mostra uma faixa amarela no alto ("Versão X disponível"). Clique nela
+  para abrir a nova. Se você copiou o programa para outro lugar (ex.: área
+  de trabalho), é por esse aviso que fica sabendo.
+
+O EXCEL GERADO
+  - Leva a logo da empresa onde o modelo tem escrito "Logo".
+  - As fotos entram comprimidas (as originais ficam na pasta Fotos) e o
+    arquivo nunca passa de 14 MB: se passar, o programa comprime mais
+    sozinho.
+
+SE DER ALGUM PROBLEMA
+  - "Não consegui gravar o arquivo": o Excel daquela proposta está aberto.
+    Feche e gere de novo.
+  - "Caminho longo demais": escolha em "Salvar em" uma pasta mais curta.
+  - "Recusou o usuário/senha": clique em "Configurar login…" de novo.
+  - Erros inesperados já chegam sozinhos ao responsável (o programa grava um
+    resumo do erro, com o fim do log, na pasta pública - nunca senha).
+    Mesmo assim, avise informando o nº da
+    proposta. O log completo fica em:
+       %LOCALAPPDATA%\DownloaderFotos\logs
+    (cole esse endereço na barra do Explorador de Arquivos)
+  - Para saber quanto o programa é usado, cada Excel gerado registra uma
+    linha (data, pessoa, banco, modelo, proposta, nº de fotos) na pasta
+    pública. Nenhuma senha, foto ou dado do cliente vai junto.

@@ -1,0 +1,31 @@
+# Ficam fora: segredos, o que o build recria, as pastas de saída/rascunho e
+# tudo que tem dado de cliente.
+
+# planilhas reais da equipe usadas como base dos modelos (dados de clientes);
+# na versão de portfólio os modelos são fictícios (ferramentas/gerar_modelos_exemplo.py)
+referencia/
+
+# saídas de teste (pasta "Salvar em" usada nos testes) e mapeamento da Central de Gestão
+apagar/
+exploracao/
+
+# build (o .exe vai pra pasta pública; o LEIA-ME da dist é o guia do usuário)
+build/
+dist/*
+!dist/LEIA-ME.txt
+dist_build/
+dist_novo/
+*.spec
+__pycache__/
+.pytest_cache/
+.venv/
+
+# sessões/tokens/login - NUNCA no Git (ficam em %LOCALAPPDATA%, mas por garantia)
+sessao_*.json
+sessao_*.dat
+token_*.json
+login.dat
+intranet.dat
+
+# arquivos temporários do Excel
+~$*

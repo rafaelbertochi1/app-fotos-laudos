@@ -1,0 +1,6 @@
+playwright>=1.40
+pillow>=10
+pywin32>=306; sys_platform == "win32"
+openpyxl>=3.1
+pyinstaller>=6; sys_platform == "win32"
+sv-ttk>=2.6
